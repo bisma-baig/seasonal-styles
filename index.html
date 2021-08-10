@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Eddie Browser Outfitters</title>
+    <meta name="robots" content="noindex,nofollow" />
+	<!-- below is a google font, go to https://www.google.com/fonts to get yours! -->
+	<link href='https://fonts.googleapis.com/css?family=Damion' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="css/default.css" />
+    <style type="text/css">
+	
+		.masthead{
+			font-family: 'Damion', cursive; /* required for google font */
+			font-size:3em;
+		}
+	
+		#logo{
+			float:right;
+			display:inline-block;
+			padding:2px;
+			max-width:100px; /* actual size of image */
+			width:20%; /* approximate size taken on screen in maximum view */
+		}
+	
+		#wear {
+			float:left;
+			display:inline-block;
+			padding:20px;
+			max-width:300px; /* actual size of image */
+			width:33%; /* approximate size taken on screen in maximum view */
+		}
+		footer {
+			text-align:center;
+			clear:both; /* ride below all items */
+			}
+		nav{
+			text-align:center; /* centers the nav */
+		}
+		
+		nav ul {
+				list-style:none; /* removes the bullets */
+			}
+		nav ul li
+			{
+				display:inline-block; /* makes horizontal, but able to declare margins */
+				margin:0 2%; /* margin left-right, gets smaller as necessary */
+			}
+		nav a:hover{
+			text-decoration: none;
+		}	
+    </style>
+   
+    <!--[if ltIE9]>
+       <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+     <![endif]-->
+</head>
+<body>
+	<header role="banner">
+	    <img src="images/four-seasons.gif" alt="Seasonal Logo Goes Here" class="flexible" id="logo" />
+		<h1 class="masthead">Eddie Browser</h1>
+		<nav>
+			<ul>
+				<li class="seasons"><a href="Spring">Spring</a></li>
+				<li class="seasons"><a href="Summer">Summer</a></li>
+				<li class="seasons"><a href="Fall">Fall</a></li>
+				<li class="seasons"><a href="Winter">Winter</a></li>
+			</ul>
+		</nav>
+	</header>
+    <main role="main">
+		 <header><h3>Outfitter for All Seasons!</h3></header>
+		 <p>
+		 The colors of the seasonal images are as follows:
+		 <ul>
+			<li>Spring: <b>#2B7129</b></li>
+			<li>Summer: <b>#EBA52B</b></li>
+			<li>Fall: <b>#A81124</b></li>
+			<li>Winter: <b>#005393</b></li>
+		 </ul>
+		 </p>
+		 <p>
+		 Aesthetic gentrify YOLO McSweeney's typewriter single-origin coffee. Slow-carb hella listicle lomo, Helvetica single-origin coffee butcher stumptown. Chambray try-hard church-key mumblecore, tote bag PBR cardigan. Retro Austin Brooklyn, blog Intelligentsia gentrify jean shorts sartorial bicycle rights gastropub. Aesthetic wayfarers Pitchfork, tattooed Carles quinoa meh leggings distillery pork belly banjo. Umami cred lumbersexual skateboard, pork belly Tumblr vegan letterpress. Fixie bicycle rights butcher chillwave, gluten-free health goth Echo Park locavore whatever.
+		 <img src="images/300x400.png" alt="Season Wear Goes Here" id="wear" />
+		 </p>
+		<p>
+			Summer is  is the hottest of the four temperate seasons, falling after spring and before autumn. Typically when
+			students have a break from school and take advantage of the warmer weather and longer days. Calling for dresses, shorts, and open toes shoes.
+			Sunscreen is a necessity to protect from the suns strong UV radiation.
+
+			Spring and "springtime" refer to the season, and also to ideas of rebirth, rejuvenation, renewal,
+			resurrection and regrowth. Many flowering plants bloom at this time of year, in a long succession, 
+			sometimes beginning when snow is still on the ground and continuing into early summer. This weather calls for
+			cozy sweaters or cardigans as the weather slowly begins to warm.
+		</p>
+		<p>
+			Fall, also known as Autumn. When the duration of daylight becomes noticeably shorter and the temperature cools considerably. Day length decreases
+			and night length increases as the season progresses until the Winter Solstice in December.One of its main features in temperate climates is
+			the striking change in colour for the leaves of deciduous trees as they prepare to shed.Falls calls for boots, scarfs, steamy cups of coffee in preperation of winter.
+
+			Winter is the coldest season of the year,the lower altitude of the Sun causes the sunlight to hit the Earth at an oblique angle. Thus a lower amount of solar 
+			radiation strikes the Earth per unit of surface area. In winter it typically snows, this weather calls for heavy jackets, coats and boots to protect from the cold.
+			
+		</p>
+		<p>
+		Text provided by <a href="http://hipsum.co/" target="_blank">Hipster Ipsum</a>
+		</p>
+     </main>
+    <footer>
+      <small>&copy; 2013, All Rights Reserved ~
+      <a href="http://validator.w3.org/check/referer" target="_blank">Valid HTML</a> ~
+      <a href="http://jigsaw.w3.org/css-validator/check?uri=referer" target="_blank">Valid CSS</a>
+      </small>
+    </footer>
+    <!-- END Footer -->
+	<script src="https://code.jquery.com/jquery-latest.js" type="text/javascript"></script>
+	<script type="text/javascript">
+	$("document").ready(function(){
+		$('.seasons a').click(function(e){//find all a tags inside class of seasons
+            e.preventDefault();//stop default submission
+			var season = $(this).attr("href");//contents of href attribute of this element
+			//alert(season);
+
+			season = season.toLowerCase();
+
+			switch(season){
+				case 'spring': 
+					$('main header h3').html('Bloom into Spring Wear!');
+					$('#logo').attr('src','images/spring.gif');
+					$('#wear').attr('src','images/spring-wear.jpg');
+					$('html').css('background-color','#2B7129');
+				break;
+			
+				case 'summer':
+					$('main header h4').html('summer is better than autum, thats a fallacy!');
+					$('#logo').attr('src','images/summer.gif');
+					$('#wear').attr('src','images/summer-wear.jpg');
+					$('html').css('background-color','#EBA52B');
+				break;
+		
+				case 'fall':
+					$('main header h5').html('My favorite fall outfit is har-vest!');
+					$('#logo').attr('src','images/fall.gif');
+					$('#wear').attr('src','images/fall-wear.jpg');
+					$('html').css('background-color','#A81124');
+				break;
+			
+				case 'winter':
+					$('main header h6').html('Dont coat me on this season tempreture!');
+					$('#logo').attr('src','images/winter.gif');
+					$('#wear').attr('src','images/winter-wear.jpg');
+					$('html').css('background-color','#005393');
+				break;
+			};		
+		});
+	});
+
+    </script>
+	
+</body>
+</html>
